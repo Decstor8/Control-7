@@ -1,21 +1,21 @@
-import {MenuItems} from "../Items/MenuItems.ts";
+import React from 'react';
 import { ItemsProps } from '../../types';
 
-const AddItems: React.FC<ItemsProps> = ({items}) => {
+const AddItems: React.FC<ItemsProps> = ({items, addItem}) => {
     return (
         <div>
             <h2>Add Items:</h2>
             <div className='menu-container'>
-                {MenuItems.map((item) => (
+                {items.map((item) => (
                     <div className='menu-item-block'>
-                        <button>
+                        <button onClick={() => addItem(item)}>
                             <div>
                                 <h3 className='title-card'>{item.name}</h3>
-                                <p>{item.name}</p>
+                                <p>{item.price}</p>
                             </div>
                         </button>
                     </div>
-                ))};
+                ))}
             </div>
         </div>
     );
