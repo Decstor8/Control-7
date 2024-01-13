@@ -11,10 +11,21 @@ const App: React.FC = () => {
 
     return (
         <div className='app'>
+            <header className="header">
+                <nav className="head-nav">
+                    <ul className="head-nav-list">
+                        <li className="nav-item"><a href="#" className="link">Главная</a></li>
+                        <li className="nav-item"><a href="#" className="link">О нас</a></li>
+                        <li className="nav-item"><a href="#" className="link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div className='block-menu'>
             <div className='menu-container'>
                 <AddItems items={MenuItems}
                           addItem={(menuItem) => addOrder(menuItem, orderItems, setOrderItems
                 )}/>
+            </div>
             </div>
             <div className='order-container'>
                 <OrderDetails orderItems={orderItems}

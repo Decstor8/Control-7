@@ -10,22 +10,23 @@ const OrderDetails: React.FC<OrderProps> = ({ orderItems, removeItem }) => {
 
     return (
         <div>
-            <h2>Order Details:</h2>
+            <h2>Информация для заказа:</h2>
                 <div>
                     {orderItems.map((item) => (
-                        <div key={item.name} className='order-item'>
+                        <div className='order-item'>
                             <div>
+                                <img className='img-card-result' src={item.image} alt={item.image} />
                                 <h3 className='title-card'>{item.name}</h3>
-                                <p>Quantity: {item.quantity}</p>
-                                <p>Price: {item.price}</p>
+                                <p className='info'>Количество: {item.quantity}</p>
+                                <p className='info'>Цена за порцию: {item.price}</p>
                                 <button className='btn-delete' onClick={() => removeItem(item.name)}></button>
                             </div>
                         </div>
                     ))}
-                    <p>Итого к оплате: {resultPrice()}</p>
+                    <p className='description-price'>Итого к оплате: {resultPrice()}</p>
                 </div>
 
-            {orderItems.length === 0 && <p>Order is empty! Please add some items!</p>}
+            {orderItems.length === 0 && <p className='error-description-price'>Order is empty! Please add some items!</p>}
         </div>
     );
 };
