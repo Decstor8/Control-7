@@ -5,7 +5,7 @@ export const addOrder = (
     orderItems: Menu[],
     setOrderItems: React.Dispatch<React.SetStateAction<Menu[]>>
 ) => {
-    const element = orderItems.find(({ name }) => name === menuItem.name);
+    const element = orderItems.find((item) => item.name === menuItem.name);
 
 
     if (element) {
@@ -14,7 +14,7 @@ export const addOrder = (
                 item.name === menuItem.name ? {
                 ...item,
                     quantity: (item.quantity || 1) + 1
-            } : item
+            }:item
             )
         );
     } else {

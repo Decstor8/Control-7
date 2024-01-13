@@ -1,16 +1,16 @@
 import {Menu} from "../../types";
 import pizza from '../../assets/pizza.png';
-import cezar from '../../assets/cezar.png';
-import cotleta from '../../assets/cotleta.png';
-import Medium from '../../assets/Medium.png';
-import pelmen from '../../assets/pelmen.png';
-import roll from '../../assets/roll.png';
+import caesar from '../../assets/cezar.png';
+import cutlets from '../../assets/cotleta.png';
+import syrniki from '../../assets/Medium.png';
+import dumplings from '../../assets/pelmen.png';
+import rolls from '../../assets/roll.png';
 
 export const MenuItems: Menu[] = [
-    {name: 'Пицца Куриная', price: 868, image: pizza},
-    {name: 'Котлеты с рисом и грибами', price: 398, image: cotleta},
-    {name: 'Салат "Цезарь"', price: 398, image: cezar},
-    {name: 'Сырники', price: 288, image: Medium},
-    {name: 'Пельмени с бульонам', price: 228, image: pelmen},
-    {name: 'Цезарь Ролл', price: 228, image: roll},
+    {name: 'Пицца Куриная "большая"', price: 868, image: pizza},
+    {name: 'Котлеты с рисом и грибами', price: 398, image: cutlets},
+    {name: 'Салат "Цезарь"', price: 398, image: caesar},
+    {name: 'Сырники', price: 288, image: syrniki},
+    {name: 'Пельмени с бульоном', price: 228, image: dumplings},
+    {name: 'Цезарь Ролл', price: 228, image: rolls},
 ];
