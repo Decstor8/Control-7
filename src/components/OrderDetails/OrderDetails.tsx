@@ -18,7 +18,7 @@ const OrderDetails: React.FC<OrderProps> = ({ orderItems, removeItem }) => {
                                 <h3 className='title-card'>{item.name}</h3>
                                 <p>Quantity: {item.quantity}</p>
                                 <p>Price: {item.price}</p>
-                                <button onClick={() => removeItem(item.name)}>Remove</button>
+                                <button className='btn-delete' onClick={() => removeItem(item.name)}></button>
                             </div>
                         </div>
                     ))}

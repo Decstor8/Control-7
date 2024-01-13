@@ -10,8 +10,9 @@ const AddItems: React.FC<ItemsProps> = ({items, addItem}) => {
                     <div className='menu-item-block'>
                         <button onClick={() => addItem(item)}>
                             <div>
+                                <img src={item.image} alt={item.image} />
                                 <h3 className='title-card'>{item.name}</h3>
-                                <p>{item.price}</p>
+                                <p>{item.price} KGS</p>
                             </div>
                         </button>
                     </div>
